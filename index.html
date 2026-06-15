@@ -67,9 +67,10 @@
             margin-top: 15px;
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
         }
 
-        button {
+        button, .btn-link {
             background-color: #0054a6;
             color: white;
             border: none;
@@ -79,9 +80,13 @@
             border-radius: 4px;
             cursor: pointer;
             transition: background 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        button:hover {
+        button:hover, .btn-link:hover {
             background-color: #003a73;
         }
 
@@ -90,6 +95,13 @@
         }
         button.secondary:hover {
             background-color: #333;
+        }
+
+        .btn-link.agent-btn {
+            background-color: #1a73e8;
+        }
+        .btn-link.agent-btn:hover {
+            background-color: #1557b0;
         }
 
         /* Área de Visualização do Documento */
@@ -373,6 +385,7 @@
         <div class="btn-container">
             <button onclick="processarAvaliacao()">Gerar Layout de Avaliação</button>
             <button class="secondary" onclick="carregarExemploMSEP()">Carregar Exemplo MSEP</button>
+            <a href="https://gemini.google.com/gem/11MTS3gNX9BTVskJV-jtE-P2NAqtdyFcz?usp=sharing" target="_blank" class="btn-link agent-btn">Acessar Agente Gerador JSON</a>
         </div>
     </div>
 
@@ -519,24 +532,23 @@
             questoesOtimizadas.forEach((q, idx) => {
                 let numItem = String(idx + 1).padStart(2, '0');
                 
-                // Montagem com separação explícita de elementos metodológicos
+                // Montagem sem o campo "REF. ORIGINAL" no cabeçalho
                 let itemHTML = `
                     <div class="item-container">
-                        <div class="item-header-bar">ITEM ${numItem} (Ref. Original: Questão ${q.idOriginal || (idx+1)})</div>
+                        <div class="item-header-bar">ITEM ${numItem}</div>
                 `;
 
                 // 1. CAPACIDADE AVALIADA
                 if (q.capacidade) {
                     itemHTML += `
                         <div class="msep-section">
-                            <span class="msep-label">Capacidade Avaliada:</span><br>
+                            <span class="msep-label">Capacidade Evaluada:</span><br>
                             <em>${escapeHTML(q.capacidade)}</em>
                         </div>
                     `;
                 }
 
                 // 2. CONTEXTUALIZAÇÃO
-                // Se não vier mapeado especificamente, usa a chave 'enunciado' como fallback histórico
                 let contextoConteudo = q.contextualizacao || q.enunciado || '';
                 if (contextoConteudo) {
                     itemHTML += `
