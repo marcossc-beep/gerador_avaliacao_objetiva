@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>MSEP SC - Layout Architect (Modelo Oficial SENAI)</title>
+    <title>MSEP SC - Layout Architect (Gerador Otimizado para Impressão)</title>
     <style>
         :root {
             --primary-color: #000000;
@@ -24,7 +24,7 @@
             color: #000000;
         }
 
-        /* Interface Administrativa (Painel de Controle) */
+        /* Interface do Usuário (Painel de Controle) */
         .no-print-interface {
             max-width: 1200px;
             margin: 0 auto 30px auto;
@@ -53,7 +53,7 @@
 
         textarea {
             width: 100%;
-            height: 300px;
+            height: 250px;
             font-family: 'Courier New', Courier, monospace;
             font-size: 10pt;
             padding: 12px;
@@ -114,38 +114,38 @@
             display: none;
         }
 
-        /* ESTILOS DE IMPRESSÃO CORPORATIVA (OTIMIZADOS PARA PRETO E BRANCO) */
+        /* ESTILOS DE IMPRESSÃO CORPORATIVA SENAI (OTIMIZADOS PARA ECONOMIA DE PAPEL) */
         .print-page {
             background: #fff;
             color: #000;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 10pt;
-            line-height: 1.4;
+            font-size: 9.5pt; /* Reduzido ligeiramente para melhor aproveitamento */
+            line-height: 1.35;
             padding: 0;
         }
 
         .header-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         
         .logo-brand {
             color: #000000;
-            font-size: 24pt;
+            font-size: 22pt;
             font-weight: bold;
             line-height: 1;
         }
         
         .logo-subtext {
-            font-size: 7.5pt;
+            font-size: 7pt;
             font-weight: bold;
             color: #000000;
             text-transform: uppercase;
         }
         
         .logo-state {
-            font-size: 9pt;
+            font-size: 8.5pt;
             color: #333;
         }
         
@@ -155,42 +155,42 @@
         }
         
         .header-title h1 {
-            font-size: 15pt;
+            font-size: 14pt;
             font-weight: bold;
-            margin: 0 0 5px 0;
+            margin: 0 0 4px 0;
             text-transform: uppercase;
         }
         
         .header-meta {
-            font-size: 9.5pt;
+            font-size: 9pt;
             color: #000;
         }
         
         .student-info-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         
         .student-info-table td {
             border: 1px solid #000000;
-            padding: 5px 8px;
-            font-size: 9.5pt;
+            padding: 4px 6px;
+            font-size: 9pt;
         }
         
         .score-box {
             border: 1px solid #000000;
-            padding: 8px;
+            padding: 6px;
             text-align: center;
-            width: 130px;
+            width: 120px;
             font-weight: bold;
         }
         
-        /* Cartão Resposta Espelhado Otimizado */
+        /* Cartão Resposta Espelhado Otimizado Econômico */
         .answer-card {
             width: 100%;
-            border: 2px solid #000000;
-            margin-bottom: 20px;
+            border: 1.5px solid #000000;
+            margin-bottom: 15px;
             page-break-inside: avoid;
             break-inside: avoid;
         }
@@ -199,9 +199,9 @@
             background-color: #000000;
             color: #ffffff;
             text-align: center;
-            padding: 6px;
+            padding: 4px;
             font-weight: bold;
-            font-size: 10pt;
+            font-size: 9.5pt;
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
@@ -214,7 +214,7 @@
         .answer-column {
             width: 33.33%;
             vertical-align: top;
-            padding: 6px 12px;
+            padding: 4px 10px;
             border-right: 1px dashed #666;
         }
         
@@ -223,8 +223,8 @@
         }
         
         .answer-item-row {
-            margin: 5px 0;
-            font-size: 9.5pt;
+            margin: 4px 0;
+            font-size: 9pt;
             color: #000000;
             font-weight: bold;
             display: flex;
@@ -241,82 +241,83 @@
         
         .bubble {
             display: inline-block;
-            width: 17px;
-            height: 17px;
+            width: 16px;
+            height: 16px;
             border: 1.5px solid #000000;
             border-radius: 50%;
             text-align: center;
-            line-height: 14px;
-            font-size: 8pt;
+            line-height: 13px;
+            font-size: 7.5pt;
             font-weight: bold;
             color: #000000;
             margin: 0 2px;
             text-transform: uppercase;
         }
         
-        /* Estrutura dos Itens e Questões - Padrão Rigoroso MSEP */
+        /* Estrutura dos Itens e Questões Otimizadas em Espaço */
         .item-container {
             page-break-inside: avoid;
             break-inside: avoid;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             border: 1px solid #000000;
-            padding: 12px;
+            padding: 8px 10px; /* Reduzido padding para economizar espaço */
         }
         
         .item-header-bar {
             background-color: #ececec;
             color: #000000;
             border-bottom: 1px solid #000000;
-            padding: 5px 8px;
+            padding: 3px 8px;
             font-weight: bold;
-            font-size: 10pt;
+            font-size: 9.5pt;
             text-transform: uppercase;
-            margin: -12px -12px 10px -12px;
+            margin: -8px -10px 6px -10px;
         }
         
-        .msep-section {
-            margin-bottom: 8px;
+        .field-section {
+            margin-bottom: 5px;
             text-align: justify;
         }
         
-        .msep-label {
+        .field-title {
             font-weight: bold;
             text-transform: uppercase;
-            font-size: 9pt;
-            display: inline-block;
+            font-size: 8.5pt;
             color: #222;
             border-bottom: 1px solid #000;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
+            display: inline-block;
         }
         
         .code-block {
             display: block;
             background-color: #f2f2f2;
             border: 1px dashed #333333;
-            padding: 8px;
-            margin: 8px 0;
+            padding: 6px;
+            margin: 6px 0;
             font-family: "Courier New", Courier, monospace;
-            font-size: 9pt;
+            font-size: 8.5pt;
             white-space: pre-wrap;
             color: #000000;
+            line-height: 1.2;
         }
         
         .alternatives-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
-            border-top: 1px solid #ccc;
-            padding-top: 5px;
+            margin-top: 5px;
+            border-top: 1px solid #ddd;
+            padding-top: 4px;
         }
         
         .alternatives-table td {
-            padding: 5px 0;
+            padding: 3px 0;
             vertical-align: top;
-            font-size: 10pt;
+            font-size: 9.5pt;
         }
         
         .alternative-letter {
-            width: 25px;
+            width: 22px;
             font-weight: bold;
             color: #000000;
         }
@@ -325,15 +326,15 @@
         @media print {
             @page {
                 size: A4;
-                margin: 15mm;
+                margin: 12mm 15mm; /* Ajustado margens verticais para maximizar a área útil */
                 @bottom-right {
                     content: "Página " counter(page) " de " counter(pages);
-                    font-size: 9pt;
+                    font-size: 8.5pt;
                     font-family: Arial, sans-serif;
                 }
                 @bottom-left {
                     content: "SENAI - Departamento Regional de Santa Catarina";
-                    font-size: 9pt;
+                    font-size: 8.5pt;
                     font-family: Arial, sans-serif;
                 }
             }
@@ -370,12 +371,12 @@
     <div class="no-print-interface">
         <h1>MSEP SC - Layout Architect</h1>
         <div class="instructions">
-            <p><strong>Instruções de Operação MSEP (Preto e Branco Otimizado):</strong></p>
+            <p><strong>Instruções de Operação P&B Otimizada (Layout Compacto):</strong></p>
             <ol>
-                <li>Cole o arquivo JSON estruturado contendo as chaves metodológicas (<code>capacidade</code>, <code>contextualizacao</code> e <code>comando</code>).</li>
-                <li>O interpretador montará os blocos seguindo rigorosamente a segmentação pedagógica exigida pela instituição.</li>
-                <li>O algoritmo de preenchimento inteligente de lacunas continua ativo para compactar itens <code>P</code>, <code>M</code> e <code>G</code> visando economia de folhas.</li>
-                <li>Clique em <strong>"Gerar Layout de Avaliação"</strong> para disparar a visualização e o comando de impressão.</li>
+                <li>Cole o arquivo estruturado JSON no campo abaixo.</li>
+                <li>O algoritmo organizará as questões de modo compacto, priorizando o preenchimento inteligente de lacunas para economizar o máximo de folhas de papel.</li>
+                <li>Toda a paleta de cores foi convertida para escala de cinza de alto contraste, garantindo nitidez máxima em impressões monocromáticas.</li>
+                <li>Clique em <strong>"Gerar Layout de Avaliação"</strong>. Uma prévia surgirá abaixo e a janela de impressão abrirá automaticamente.</li>
             </ol>
         </div>
 
@@ -384,7 +385,7 @@
 
         <div class="btn-container">
             <button onclick="processarAvaliacao()">Gerar Layout de Avaliação</button>
-            <button class="secondary" onclick="carregarExemploMSEP()">Carregar Exemplo MSEP</button>
+            <button class="secondary" onclick="carregarExemplo()">Resetar para Exemplo</button>
             <a href="https://gemini.google.com/gem/11MTS3gNX9BTVskJV-jtE-P2NAqtdyFcz?usp=sharing" target="_blank" class="btn-link agent-btn">Acessar Agente Gerador JSON</a>
         </div>
     </div>
@@ -395,25 +396,24 @@
     </div>
 
     <script>
-        function carregarExemploMSEP() {
+        function carregarExemplo() {
             document.getElementById('json-input').value = JSON.stringify({
                 "unidadeCurricular": "Programação de Aplicativos",
-                "avaliacao": "Avaliação Somativa Objetiva",
+                "avaliacao": "Avaliação Somativa Objetiva - MSEP",
                 "curso": "Técnico em Desenvolvimento de Sistemas",
                 "data": "15/06/2026",
                 "questoes": [
                     {
                         "idOriginal": 1,
                         "tamanho": "M",
-                        "capacidade": "Identificar erros de acordo com o requisito do programa e linguagem",
-                        "contextualizacao": "Em uma indústria de software na área de desenvolvimento web, a equipe técnica está integrando um formulário de cadastro de novos usuários ao servidor. Ao realizar os testes de envio dos dados preenchidos no formulário, o desenvolvedor nota que o registro é criado no banco de dados, porém o campo correspondente ao nome do usuário é gravado de forma nula (null).",
-                        "codigo": "const resposta = await fetch('http://localhost:3000/usuarios', {\n    method: 'POST',\n    body: JSON.stringify({ email: emailInput })\n});",
-                        "comando": "Ao analisar a estrutura do código técnico apresentado e o comportamento do erro no ecossistema da aplicação, qual é a causa raiz da persistência do valor nulo no banco de dados?",
+                        "capacidade": "Utilizar o ambiente de desenvolvimento (IDE) para rastreabilidade do código",
+                        "contextualizacao": "Em uma indústria de tecnologia na área de soluções corporativas, um programador implementou uma tela de listagem de funcionários utilizando uma requisição HTTP via método GET. Na interface gráfica do navegador, as linhas com os registros dos colaboradores são criadas e exibidas corretamente, porém a coluna destinada ao e-mail corporativo permanece totalmente em branco para todos os registros listados.",
+                        "comando": "Considerando as evidências coletadas por meio da ferramenta de rastreabilidade do navegador, qual é a origem da falha que impede a visualização dos dados?",
                         "alternativas": [
-                            "O frontend está enviando o nome corretamente no corpo da requisição.",
-                            "O frontend deixa de incluir a propriedade do nome preenchido pelo usuário dentro do corpo.",
-                            "O backend recebe o campo de forma íntegra mas descarta na execução SQL.",
-                            "O frontend envia a propriedade mapeada com nomenclatura incorreta."
+                            "A API do backend está enviando os dados com formato de cabeçalho incorreto, impedindo que o navegador interprete os caracteres de texto do e-mail.",
+                            "O banco de dados está executando uma instrução de consulta (SELECT) com as colunas invertidas, resultando no envio de campos vazios para a aplicação.",
+                            "A aplicação frontend falha no mapeamento interno ou na vinculação da chave de dados durante o método de renderização da lista na interface.",
+                            "O navegador bloqueou o recebimento das strings de e-mail por questões de segurança ligadas às políticas de compartilhamento de recursos de origens cruzadas (CORS)."
                         ]
                     }
                 ]
@@ -431,7 +431,7 @@
             try {
                 data = JSON.parse(rawInput);
             } catch (e) {
-                alert("Erro na análise do JSON. Verifique a sintaxe.");
+                alert("Erro na análise do JSON. Verifique a sintaxe (vírgulas, aspas, etc).");
                 return;
             }
 
@@ -442,12 +442,14 @@
 
             let questoesOriginais = [...data.questoes];
             
-            // Algoritmo de Otimização de Espaço por tamanho
+            // Separação por tamanhos para balanceamento de folhas inteligente
             let pequenas = questoesOriginais.filter(q => (q.tamanho || 'M').toUpperCase() === 'P');
             let medias = questoesOriginais.filter(q => (q.tamanho || 'M').toUpperCase() === 'M');
             let grandes = questoesOriginais.filter(q => (q.tamanho || 'M').toUpperCase() === 'G');
             
             let questoesOtimizadas = [];
+            
+            // Intercala os blocos para fazer casamentos perfeitos de espaço (ex: G com P)
             while(grandes.length > 0 || medias.length > 0 || pequenas.length > 0) {
                 if(grandes.length > 0) questoesOtimizadas.push(grandes.shift());
                 if(pequenas.length > 0) questoesOtimizadas.push(pequenas.shift());
@@ -458,7 +460,7 @@
             let container = document.getElementById('document-content');
             container.innerHTML = ''; 
 
-            // Cabeçalho institucional MSEP
+            // Cabeçalho institucional (Monocromático Puro)
             let headerHTML = `
                 <table class="header-table">
                     <tr>
@@ -488,7 +490,7 @@
                 </table>
             `;
 
-            // Cartão Resposta Espelhado
+            // Cartão Resposta Dinâmico Espelhado (Dividido em 3 Colunas)
             let totalItens = questoesOtimizadas.length;
             let itensPorColuna = Math.ceil(totalItens / 3);
             
@@ -528,11 +530,9 @@
             container.innerHTML += headerHTML;
             container.innerHTML += cardHTML;
 
-            // Renderização dos Itens com Estrutura Exclusiva MSEP
+            // Renderização dos Itens Otimizados MSEP
             questoesOtimizadas.forEach((q, idx) => {
                 let numItem = String(idx + 1).padStart(2, '0');
-                
-                // Montagem sem o campo "REF. ORIGINAL" no cabeçalho
                 let itemHTML = `
                     <div class="item-container">
                         <div class="item-header-bar">ITEM ${numItem}</div>
@@ -541,19 +541,19 @@
                 // 1. CAPACIDADE AVALIADA
                 if (q.capacidade) {
                     itemHTML += `
-                        <div class="msep-section">
-                            <span class="msep-label">Capacidade Evaluada:</span><br>
+                        <div class="field-section">
+                            <span class="field-title">Capacidade Avaliada:</span><br>
                             <em>${escapeHTML(q.capacidade)}</em>
                         </div>
                     `;
                 }
 
-                // 2. CONTEXTUALIZAÇÃO
+                // 2. CONTEXTUALIZAÇÃO (Suporta chaves 'contextualizacao' ou 'enunciado')
                 let contextoConteudo = q.contextualizacao || q.enunciado || '';
                 if (contextoConteudo) {
                     itemHTML += `
-                        <div class="msep-section">
-                            <span class="msep-label">Contextualização:</span><br>
+                        <div class="field-section">
+                            <span class="field-title">Contextualização:</span><br>
                             ${escapeHTML(contextoConteudo)}
                         </div>
                     `;
@@ -569,17 +569,19 @@
                 // 3. COMANDO
                 if (q.comando) {
                     itemHTML += `
-                        <div class="msep-section" style="margin-top: 10px;">
-                            <span class="msep-label">Comando:</span><br>
+                        <div class="field-section" style="margin-top: 4px;">
+                            <span class="field-title">Comando:</span><br>
                             <strong>${escapeHTML(q.comando)}</strong>
                         </div>
                     `;
                 }
 
-                // Tabela de Alternativas Objeto
+                // Renderização Unificada de Alternativas
                 itemHTML += `<table class="alternatives-table">`;
                 
                 let letras = ['A', 'B', 'C', 'D'];
+                
+                // Mapeamento caso o JSON use 'alternativas' ou 'alternatives'
                 let listaAlternativas = q.alternativas || q.alternatives;
 
                 if (listaAlternativas && Array.isArray(listaAlternativas)) {
@@ -593,7 +595,7 @@
                     });
                 } else {
                     for(let k=0; k<4; k++) {
-                        itemHTML += `<tr><td class="alternative-letter">(${letras[k]})</td><td style="border-bottom: 1px dotted #ccc; height: 20px;"></td></tr>`;
+                        itemHTML += `<tr><td class="alternative-letter">(${letras[k]})</td><td style="border-bottom: 1px dotted #ccc; height: 18px;"></td></tr>`;
                     }
                 }
 
@@ -605,7 +607,6 @@
                 container.innerHTML += itemHTML;
             });
 
-            // Exibe a visualização e dispara o driver de impressão nativo do browser
             document.getElementById('preview-container').style.display = 'block';
             
             setTimeout(() => {
